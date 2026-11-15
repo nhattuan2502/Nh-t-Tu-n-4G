@@ -1,2 +1,86 @@
-# Nh-t-Tu-n-4G
-UY TÍN SỐ 1
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUAN OSAKA - SIM Nhật Bản</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:#071b35;color:white;padding:25px 18px;text-align:center}
+header h1{font-size:30px;margin:5px}
+header p{color:#cbd5e1}
+.hero{padding:35px 18px;text-align:center;background:#e5efff}
+.hero h2{font-size:27px;color:#103b75}
+.hero p{line-height:1.6}
+.container{max-width:850px;margin:auto;padding:20px}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{background:white;padding:20px;border-radius:14px;box-shadow:0 3px 12px #0001}
+.card h3{color:#174b91}
+.card p{line-height:1.5}
+.btn{display:block;background:#087b48;color:white;text-decoration:none;text-align:center;padding:12px;border-radius:8px;margin-top:15px;font-weight:bold}
+.info{background:white;padding:22px;border-radius:14px;margin-top:22px;line-height:1.8}
+footer{text-align:center;background:#071b35;color:white;padding:25px;margin-top:30px}
+@media(max-width:500px){.products{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>TUAN OSAKA</h1>
+<p>SIM NHẬT BẢN - UY TÍN SỐ 1</p>
+</header>
+
+<section class="hero">
+<h2>KẾT NỐI INTERNET TẠI NHẬT BẢN</h2>
+<p>Chuyên cung cấp SIM vật lý và eSIM Nhật Bản.<br>
+Nhanh chóng - Uy tín - Nhiệt tình</p>
+</section>
+
+<main class="container">
+<h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+<div class="products">
+<div class="card">
+<h3>📱 eSIM Full Data</h3>
+<p>eSIM Nhật Bản tiện lợi, nhận mã QR điện tử.</p>
+<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
+</div>
+
+<div class="card">
+<h3>📶 SIM vật lý Full Data</h3>
+<p>SIM Nhật Bản dành cho điện thoại hỗ trợ SIM vật lý.</p>
+<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
+</div>
+
+<div class="card">
+<h3>💬 SIM nhận SMS</h3>
+<p>Các gói dung lượng 50GB - 100GB.</p>
+<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
+</div>
+
+<div class="card">
+<h3>🗓️ SIM bán đứt theo năm</h3>
+<p>Các gói 10GB - 20GB.</p>
+<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
+</div>
+</div>
+
+<div class="info">
+<h3>VÌ SAO CHỌN TUAN OSAKA?</h3>
+<p>✅ Hỗ trợ khách hàng bằng tiếng Việt</p>
+<p>✅ Tư vấn nhiệt tình</p>
+<p>✅ Hỗ trợ cài đặt SIM/eSIM</p>
+<p>✅ Hỗ trợ khách hàng trong quá trình sử dụng</p>
+</div>
+</main>
+
+<footer>
+<h3>TUAN OSAKA</h3>
+<p>UY TÍN - NHIỆT TÌNH - NHANH CHÓNG</p>
+<p>SIM NHẬT BẢN - eSIM NHẬT BẢN</p>
+</footer>
+
+</body>
+</html>
