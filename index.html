@@ -2,86 +2,362 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TUAN OSAKA - SIM Nhật Bản</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
-header{background:#071b35;color:white;padding:25px 18px;text-align:center}
-header h1{font-size:30px;margin:5px}
-header p{color:#cbd5e1}
-.hero{padding:35px 18px;text-align:center;background:#e5efff}
-.hero h2{font-size:27px;color:#103b75}
-.hero p{line-height:1.6}
-.container{max-width:850px;margin:auto;padding:20px}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.card{background:white;padding:20px;border-radius:14px;box-shadow:0 3px 12px #0001}
-.card h3{color:#174b91}
-.card p{line-height:1.5}
-.btn{display:block;background:#087b48;color:white;text-decoration:none;text-align:center;padding:12px;border-radius:8px;margin-top:15px;font-weight:bold}
-.info{background:white;padding:22px;border-radius:14px;margin-top:22px;line-height:1.8}
-footer{text-align:center;background:#071b35;color:white;padding:25px;margin-top:30px}
-@media(max-width:500px){.products{grid-template-columns:1fr}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TUAN OSAKA - Cửa hàng eSIM Nhật Bản. Tư vấn và hỗ trợ khách hàng bằng tiếng Việt.">
+  <title>TUAN OSAKA | eSIM Nhật Bản</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #172033;
+      background: #f5f7fb;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1100px, 92%); margin: auto; }
+
+    header {
+      background: #102747;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 12px #0002;
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .logo { font-size: 23px; font-weight: 900; letter-spacing: 1px; }
+    .logo span { color: #ff5a62; }
+    nav { display: flex; gap: 22px; font-size: 14px; }
+    nav a:hover { color: #ff747b; }
+
+    .hero {
+      color: white;
+      background: linear-gradient(125deg, #102747, #1d5682);
+      padding: 75px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: #ffffff20;
+      border: 1px solid #ffffff55;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .hero h1 { font-size: clamp(32px, 7vw, 54px); line-height: 1.2; }
+    .hero h1 span { color: #ff747b; }
+    .hero p { max-width: 620px; margin: 18px auto 25px; color: #e4edf8; }
+    .btn {
+      display: inline-block;
+      background: #ed414d;
+      color: white;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn:hover { background: #cf303c; }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid white;
+      margin-left: 8px;
+    }
+
+    section { padding: 58px 0; }
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 { font-size: 29px; color: #102747; }
+    .section-title p { color: #68758a; margin-top: 7px; }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: -25px;
+      position: relative;
+    }
+    .benefit {
+      background: white;
+      padding: 22px 15px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 5px 22px #10274712;
+    }
+    .benefit .emoji { font-size: 27px; }
+    .benefit h3 { font-size: 16px; margin: 7px 0 3px; }
+    .benefit p { font-size: 13px; color: #68758a; }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .product {
+      background: white;
+      border: 1px solid #e5eaf1;
+      border-radius: 15px;
+      padding: 24px;
+      box-shadow: 0 5px 18px #1027470a;
+    }
+    .product .symbol {
+      width: 48px;
+      height: 48px;
+      background: #fff0f1;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+    .product h3 { color: #102747; font-size: 19px; }
+    .product p { color: #68758a; font-size: 14px; margin: 9px 0 16px; }
+    .price { font-size: 20px; font-weight: 800; color: #e13e4b; margin-bottom: 15px; }
+    .product .btn { width: 100%; text-align: center; }
+
+    .notice {
+      margin-top: 20px;
+      background: #fff8e9;
+      border: 1px solid #f3dfb3;
+      color: #76551c;
+      border-radius: 10px;
+      padding: 13px 15px;
+      font-size: 13px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .step {
+      background: white;
+      border-radius: 13px;
+      padding: 22px;
+      text-align: center;
+    }
+    .step b {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin: 0 auto 12px;
+      background: #102747;
+      color: white;
+      border-radius: 50%;
+    }
+    .step p { color: #68758a; font-size: 14px; margin-top: 6px; }
+
+    .faq { max-width: 760px; margin: auto; }
+    details {
+      background: white;
+      padding: 17px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #e5eaf1;
+    }
+    summary { cursor: pointer; font-weight: bold; color: #102747; }
+    details p { color: #68758a; margin-top: 10px; font-size: 14px; }
+
+    .contact {
+      background: #102747;
+      color: white;
+      text-align: center;
+    }
+    .contact h2 { font-size: 29px; }
+    .contact p { color: #d6e1ee; margin: 10px 0 22px; }
+    footer {
+      background: #0a1b31;
+      color: #c6d2e0;
+      padding: 22px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      nav { gap: 11px; font-size: 12px; }
+      .logo { font-size: 19px; }
+      .hero { padding: 60px 0; }
+      .benefits, .products, .steps { grid-template-columns: 1fr; }
+      section { padding: 45px 0; }
+      .btn-outline { margin: 10px 0 0; }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-<h1>TUAN OSAKA</h1>
-<p>SIM NHẬT BẢN - UY TÍN SỐ 1</p>
+  <div class="container nav">
+    <a class="logo" href="#">TUAN <span>OSAKA</span></a>
+    <nav>
+      <a href="#goi-esim">Gói eSIM</a>
+      <a href="#huong-dan">Hướng dẫn</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-<h2>KẾT NỐI INTERNET TẠI NHẬT BẢN</h2>
-<p>Chuyên cung cấp SIM vật lý và eSIM Nhật Bản.<br>
-Nhanh chóng - Uy tín - Nhiệt tình</p>
-</section>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">🇯🇵 eSIM NHẬT BẢN</div>
+      <h1>KẾT NỐI NHẬT BẢN<br><span>THẬT DỄ DÀNG</span></h1>
+      <p>
+        eSIM Nhật Bản dành cho khách du lịch, du học sinh
+        và người Việt sinh sống tại Nhật.
+        Tư vấn bằng tiếng Việt, hỗ trợ tận tình.
+      </p>
+      <a href="#goi-esim" class="btn">XEM CÁC GÓI eSIM</a>
+      <a href="#lien-he" class="btn btn-outline">LIÊN HỆ</a>
+    </div>
+  </section>
 
-<main class="container">
-<h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+  <div class="container">
+    <div class="benefits">
+      <div class="benefit">
+        <div class="emoji">📱</div>
+        <h3>eSIM tiện lợi</h3>
+        <p>Không cần tháo SIM vật lý</p>
+      </div>
+      <div class="benefit">
+        <div class="emoji">⚡</div>
+        <h3>Hỗ trợ nhanh</h3>
+        <p>Tư vấn bằng tiếng Việt</p>
+      </div>
+      <div class="benefit">
+        <div class="emoji">🇯🇵</div>
+        <h3>Dành cho Nhật Bản</h3>
+        <p>Tập trung các gói mạng Nhật</p>
+      </div>
+    </div>
+  </div>
 
-<div class="products">
-<div class="card">
-<h3>📱 eSIM Full Data</h3>
-<p>eSIM Nhật Bản tiện lợi, nhận mã QR điện tử.</p>
-<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
-</div>
+  <section id="goi-esim">
+    <div class="container">
+      <div class="section-title">
+        <h2>CÁC GÓI eSIM NHẬT BẢN</h2>
+        <p>Chọn gói phù hợp với nhu cầu sử dụng của bạn</p>
+      </div>
 
-<div class="card">
-<h3>📶 SIM vật lý Full Data</h3>
-<p>SIM Nhật Bản dành cho điện thoại hỗ trợ SIM vật lý.</p>
-<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
-</div>
+      <div class="products">
+        <article class="product">
+          <div class="symbol">🗾</div>
+          <h3>eSIM ngắn ngày</h3>
+          <p>Dành cho khách du lịch Nhật Bản trong thời gian ngắn.</p>
+          <div class="price">Liên hệ báo giá</div>
+          <a class="btn" href="#lien-he">TƯ VẤN GÓI NÀY</a>
+        </article>
 
-<div class="card">
-<h3>💬 SIM nhận SMS</h3>
-<p>Các gói dung lượng 50GB - 100GB.</p>
-<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
-</div>
+        <article class="product">
+          <div class="symbol">🌸</div>
+          <h3>eSIM dài ngày</h3>
+          <p>Dành cho người cần kết nối mạng trong thời gian dài hơn.</p>
+          <div class="price">Liên hệ báo giá</div>
+          <a class="btn" href="#lien-he">TƯ VẤN GÓI NÀY</a>
+        </article>
 
-<div class="card">
-<h3>🗓️ SIM bán đứt theo năm</h3>
-<p>Các gói 10GB - 20GB.</p>
-<a class="btn" href="https://www.facebook.com/">Liên hệ mua</a>
-</div>
-</div>
+        <article class="product">
+          <div class="symbol">🚀</div>
+          <h3>eSIM dung lượng lớn</h3>
+          <p>Dành cho nhu cầu sử dụng internet thường xuyên.</p>
+          <div class="price">Liên hệ báo giá</div>
+          <a class="btn" href="#lien-he">TƯ VẤN GÓI NÀY</a>
+        </article>
+      </div>
 
-<div class="info">
-<h3>VÌ SAO CHỌN TUAN OSAKA?</h3>
-<p>✅ Hỗ trợ khách hàng bằng tiếng Việt</p>
-<p>✅ Tư vấn nhiệt tình</p>
-<p>✅ Hỗ trợ cài đặt SIM/eSIM</p>
-<p>✅ Hỗ trợ khách hàng trong quá trình sử dụng</p>
-</div>
+      <div class="notice">
+        Lưu ý: Đây là các danh mục giới thiệu. Gói cước, dung lượng,
+        thời hạn và giá bán cụ thể sẽ được cập nhật sau khi xác nhận
+        danh sách sản phẩm từ nhà cung cấp.
+      </div>
+    </div>
+  </section>
+
+  <section id="huong-dan" style="background:#edf2f8">
+    <div class="container">
+      <div class="section-title">
+        <h2>HƯỚNG DẪN MUA eSIM</h2>
+        <p>Quy trình dự kiến dành cho khách hàng</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <b>1</b>
+          <h3>Chọn gói eSIM</h3>
+          <p>Chọn gói phù hợp với thời gian và nhu cầu sử dụng.</p>
+        </div>
+        <div class="step">
+          <b>2</b>
+          <h3>Thanh toán</h3>
+          <p>Thực hiện thanh toán theo hướng dẫn xác nhận đơn hàng.</p>
+        </div>
+        <div class="step">
+          <b>3</b>
+          <h3>Nhận mã QR</h3>
+          <p>Nhận thông tin eSIM sau khi đơn hàng được xử lý thành công.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>CÂU HỎI THƯỜNG GẶP</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Điện thoại nào sử dụng được eSIM?</summary>
+          <p>Điện thoại cần hỗ trợ eSIM và không bị khóa mạng. Hãy kiểm tra model và phiên bản máy trước khi mua.</p>
+        </details>
+        <details>
+          <summary>Mua eSIM có cần tháo SIM chính không?</summary>
+          <p>Thông thường không cần tháo SIM vật lý nếu điện thoại hỗ trợ sử dụng đồng thời hai SIM.</p>
+        </details>
+        <details>
+          <summary>Khi nào có thể cài đặt eSIM?</summary>
+          <p>Hãy làm theo hướng dẫn cài đặt đi kèm với mã QR và lưu ý thời điểm kích hoạt của từng gói.</p>
+        </details>
+        <details>
+          <summary>Nếu gặp lỗi cài đặt thì sao?</summary>
+          <p>Liên hệ TUAN OSAKA để được hỗ trợ kiểm tra thông tin và hướng dẫn xử lý.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="lien-he">
+    <div class="container">
+      <h2>TUAN OSAKA</h2>
+      <p>UY TÍN – NHIỆT TÌNH – NHANH CHÓNG</p>
+      <p>Chuyên eSIM Nhật Bản<br>Hỗ trợ khách hàng bằng tiếng Việt</p>
+      <a class="btn" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        LIÊN HỆ FACEBOOK
+      </a>
+      <p style="font-size:12px;margin-top:16px">
+        Hãy tìm trang Facebook: Tuân Osaka
+      </p>
+    </div>
+  </section>
 </main>
 
 <footer>
-<h3>TUAN OSAKA</h3>
-<p>UY TÍN - NHIỆT TÌNH - NHANH CHÓNG</p>
-<p>SIM NHẬT BẢN - eSIM NHẬT BẢN</p>
+  <div class="container">
+    © 2026 TUAN OSAKA. eSIM Nhật Bản.
+    <br>Thông tin gói cước cần được xác nhận trước khi đặt mua.
+  </div>
 </footer>
 
 </body>
 </html>
-
